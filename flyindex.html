@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+ <title>Flying</title>
+  <link rel="stylesheet" href="flystyle.css" type="text/css" />
+
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<div class="container-fluid" style="background-color:#F44336;color:#fff;height:450px;">
+  <marquee DIRECTION=RIGHT><img class="img-responsive" src="img/plane9.png"></marquee>
+</div>
+
+<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="445">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">AIR INDIA</a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#section2">Quick Book</a></li>
+          <li><a href="#section3">Search Flight</a></li>
+          <li><a href="#section4">Special Offer</a></li>
+	  <li><a href="#section5"> Reach us </a> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>    
+
+<div id="section2" class="container-fluid">
+
+<div id="container1">
+  <div id="form">
+    <form id="book_tickets">
+      <fieldset>
+        <legend>Booking Details</legend>
+
+        <p>
+          <label for="from">FROM</label>
+          <select id="from" name="from" required autofocus>
+            <option></option>
+            <option value="fr 1">Mumbai</option>
+            <option value="fr 2">Delhi</option>
+            <option value="fr 3">Banglore</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="to">TO</label>
+          <select id="to" required>
+            <option></option>
+            <option value="T 1">Chennai</option>
+            <option value="T 2">Hydrebad</option>
+            <option value="T 3">Jammu</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="date">Date</label>
+          <input type="date" name="date" id="date" min="today" required />
+        </p>
+
+        <p>
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" required />
+        </p>
+
+        <p>
+          <label for="tickets_quantity"># Tickets</label>
+          <input type="number" min="1" name="tickets_quantity" id="tickets_quantity" required />
+        </p>
+
+        <div id="submit_wrapper">
+           <button class="btn btn-primary" type="submit" value="Submit" id="book" onclick="myFunctionBook()">BOOK NOW</button>
+        </div>
+      </fieldset>
+    </form>
+
+  
+  <div id="booked">
+   <div id="shade">
+  					<div class="header">
+						<div id="text"></div>
+    						<h1>Your Booking is confirmed</h1>
+						<p>Please check your e-mail </p>
+ 					</div>
+   </div>
+  </div>
+</div>
+</div>
+ </div>
+
+
+
+<div id="section3" class="container-fluid">
+<center>
+<div id="search">
+<form id="search_tickets">
+<div class="row">
+  <div class="col-xs-4">
+<input class="form-control" id="frname" type="text" value="From" required>
+  </div>
+  <div class="col-xs-4">
+<input class="form-control" id="toname" type="text" value="To" required>
+  </div>
+  <div class="col-xs-4">
+<button class="btn btn-primary" id="searchin" onclick="myFunctionSres()"><span class="glyphicon glyphicon-search"></span>  Search</button>
+  </div>
+</div>
+</form>
+<div id="see1">
+<ul id="searchres">
+                 	<li>
+				<div id="shade">
+					<div class="header">
+    					<div id="heal"></div>	
+ 					</div>
+  					<div class="container1">
+    						<P style="color:white;">Non-Stop trip</P>
+						<hr>
+						<p style="color:white;">
+						<br>8th  May 7:00pm 
+  					        <button class="btn btn-info"id="myButton1"/>BOOK NOW</button>				<b>Rs 6700/-</b>
+						</p>
+					</div>
+	 			</div>
+		 	</li>
+                 	<li>
+				<div id="shade">
+  					<div class="header">
+    						<div id="heal1"></div><h1>via Kerala</h1>
+ 					</div>
+  					<div class="container1">
+    						<P style="color:white;">One stop trip</P>
+						<hr>
+    						<br> <p style="color:white;">9th  May 8:59am 
+  					        <button class="btn btn-info"id="myButton1" />
+						BOOK NOW</button>
+						<b>Rs 3700/-</b>
+						</p>
+					</div>
+        			</div>
+	 		</li>
+                 	<li>
+                
+            </ul>
+  </div>
+</div>
+</center>
+
+</div>
+
+
+<div id="section4" class="container-fluid">
+  <div class="row">
+          <div class="col-sm-6">
+	  <center>
+           <div class="icon icon-cube off1">
+	   </div>
+	  </center>
+	  </div>
+	  
+	  <div class="col-sm-6">
+	  <center>
+          <div class="icon icon-cube off2">
+	   </div>
+	  </center>
+          </div>
+   </div>
+</div>
+
+
+<div id="section5" class="container-fluid">
+<div id="search">	  
+<center>
+<p align="center"><img border="0" src="img/smile.GIF" width="65" height="35">
+<font style="color:008b8b" size="5" face="Times New Roman"><b>Contact Us At:</b></font></p>
+<a href="">info@airindia.com</a></font></p>
+<p><font face="Times New Roman">
+<font size="4"><a href="index.html">www.airindia.com</a></font></font></p></center>
+<center>
+<p><font size="4" color="#000000" face="Times New Roman">
+<h3>Air India</h3></font>
+</p>
+<p><font size="4" color="#000000" face="Times New Roman">Happiness in flying!
+</font>
+</p>
+<p><font size="4" color="#000000" face="Times New Roman">
+yash Paradise Ctrs., Sector-8A,
+</font>
+</p>
+<p><font size="4" color="#000000" face="Times New Roman">
+Airoli, Navi Mumbai 400708,
+Maharashtra, India.
+</font>
+</p>
+<p><font size="4" color="#000000" face="Times New Roman">Tel No:022(123456)</font></p>
+<p><font size="4" color="#000000" face="Times New Roman">
+Mobile No:123456,123456</font></p>
+<br><br><br><br><br>
+	<p> Copyright &copy; <b>AirIndia</b></a> </p>
+</center>
+   </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
